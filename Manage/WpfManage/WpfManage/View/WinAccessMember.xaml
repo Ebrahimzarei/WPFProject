@@ -1,0 +1,44 @@
+﻿<Window x:Name="WinAccessMember1" x:Class="WpfManage.View.WinAccessMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="شناسایی اعضا" Height="600" FlowDirection="RightToLeft" Width="800" WindowStartupLocation="CenterScreen" MaxHeight="600" MinHeight="600" MaxWidth="800" MinWidth="800" Loaded="WinAccessMember1_Loaded" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="87*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" FontSize="20px" Margin="176,10,0,0" TextWrapping="Wrap" Text="لطفا کارت خود را بر روی دستگاه کارت خوان قرار دهید" FontWeight="Bold" FontFamily="B Nazanin" Foreground="Red" VerticalAlignment="Top" Width="444" Grid.ColumnSpan="3"/>
+        <Image Name="ImageLogo" HorizontalAlignment="Left" Height="106" Margin="47,51,0,0" VerticalAlignment="Top" Width="136" Source="/WpfManage;component/Images/CardReader.jpg" Grid.Column="1"/>
+        <TextBlock  FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="72,34,0,0" TextWrapping="Wrap" Text="نام و نام خانوادگی" VerticalAlignment="Top" Width="124" Grid.Row="1"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="72,18,0,0" TextWrapping="Wrap" Text=" شماره ملی" VerticalAlignment="Top" Grid.Row="6"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="72,17,0,12" TextWrapping="Wrap" Text="نام پدر" Grid.Row="2" Width="73"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="71,20,0,0" TextWrapping="Wrap" Text="شماره پرسنلی" VerticalAlignment="Top" Grid.Row="3" Width="102"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="72,21,0,0" TextWrapping="Wrap" Text="شماره تماس" VerticalAlignment="Top" Grid.Row="4"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="72,18,0,0" TextWrapping="Wrap" Text="آدرس" VerticalAlignment="Top" Grid.Row="5"/>
+        <TextBlock FontSize="15" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,214,0,0" TextWrapping="Wrap" Text="عکس" VerticalAlignment="Top" Grid.Column="2" Grid.RowSpan="2"/>
+        <Image Name="ImagePersonel"  HorizontalAlignment="Left" Height="141" Margin="301,26,0,0" VerticalAlignment="Top" Width="156" Stretch="Fill" Source="/WpfManage;component/avatar-empty.png" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3"/>
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" FlowDirection="RightToLeft" Foreground="Red" Margin="0,10,87,0" TextWrapping="Wrap" Name="TextBlockNameFather" Text="" VerticalAlignment="Top" Width="283" Grid.Row="2" Height="35" PreviewTextInput="TextBlockNameFather_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" FlowDirection="RightToLeft" Foreground="Red" Margin="0,10,87,0" TextWrapping="Wrap" Name="TextBlockNoPersonel" Text="" VerticalAlignment="Top" Width="283" Grid.Row="3" Height="38" PreviewTextInput="TextBlockNoPersonel_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" FlowDirection="RightToLeft" Foreground="Red" Margin="0,14,84,0" TextWrapping="Wrap" Text="" Name="TextBlockTellephone" VerticalAlignment="Top" Width="286" Grid.Row="4" Height="32" PreviewTextInput="TextBlockTellephone_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" FlowDirection="RightToLeft" Foreground="Red" Margin="0,10,84,0" TextWrapping="Wrap" Text="" Name="TextBlockAddress" VerticalAlignment="Top" Width="286" Grid.Row="5" Height="36" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Right" IsReadOnly="True" FlowDirection="RightToLeft" Foreground="Red" Margin="0,10,84,0" TextWrapping="Wrap" Text="" Name="TextBlockNCode" VerticalAlignment="Top" Width="286" Grid.Row="6" Height="35" PreviewTextInput="TextBlockNCode_PreviewTextInput" Grid.ColumnSpan="2"/>
+
+        
+        <TextBox Opacity="0"   Name="TextBoxRfid" HorizontalAlignment="Left" Height="23" Margin="72,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"  SelectionChanged="TextBoxRfid_SelectionChanged" PreviewTextInput="TextBoxRfid_PreviewTextInput"/>
+        <Button x:Name="ButtonShowProperty" Content="نمایش اطلاعات" Grid.Column="1" HorizontalAlignment="Left" Margin="92,191,0,0" VerticalAlignment="Top" Width="91" Height="31" Click="ButtonShowProperty_Click"/>
+        <Button x:Name="ButtonClear" Content="پاک کردن" HorizontalAlignment="Left" Margin="264,191,0,0" VerticalAlignment="Top" Width="91" Height="31" Click="ButtonClear_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonClose" Content="پنجره اصلی" Grid.Column="1" HorizontalAlignment="Left" Margin="185,191,0,0" VerticalAlignment="Top" Width="87" Height="31" Click="ButtonClose_Click"/>
+        <TextBox IsReadOnly="True"  HorizontalAlignment="Right" FlowDirection="RightToLeft" Foreground="Red" Margin="0,29,87,0" TextWrapping="Wrap" x:Name="TextBlockFullName" Text="" VerticalAlignment="Top" Width="283" Grid.Row="1" Height="35" PreviewTextInput="TextBlockFullName_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImagePlay" Visibility="Hidden"  HorizontalAlignment="Left" Height="141" Margin="301,26,0,0" VerticalAlignment="Top" Width="156" Grid.RowSpan="3" Stretch="Fill" Source="/WpfManage;component/avatar-empty.png" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

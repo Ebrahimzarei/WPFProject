@@ -1,0 +1,41 @@
+﻿<Window x:Name="WinDataBase" x:Class="WpfManage.View.WinSettingDataBase"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title=" تنظیمات پایگاه داده" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="311.392" Width="400" FlowDirection="RightToLeft" Loaded="WinDataBase_Loaded">
+    <Grid Name="GridDataBases">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="106*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="36,14,0,0" TextWrapping="Wrap" Text="Datasource" VerticalAlignment="Top" Height="16" Width="60" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,12,0,0" TextWrapping="Wrap" Text="Instance" VerticalAlignment="Top" Height="16" Width="44" Grid.Row="1" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,13,0,0" TextWrapping="Wrap" Text="UserId" VerticalAlignment="Top" Height="16" Width="37" Grid.Row="2" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="46,16,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="16" Width="50" Grid.Row="3" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,14,0,0" TextWrapping="Wrap" Text="InitialCatalog" VerticalAlignment="Top" Height="16" Width="70" Grid.Row="4" Grid.Column="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="21,13,0,0" TextWrapping="Wrap" Name="TextBoxDataSource" Text="" VerticalAlignment="Top" Width="186" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="21,15,0,0" TextWrapping="Wrap" Name="TextBoxInstance" Text="" VerticalAlignment="Top" Width="186" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" FontFamily="B Yekan" Margin="21,12,0,0" TextWrapping="Wrap" Name="TextBoxUserId" Text="" VerticalAlignment="Top" Width="186" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" FontFamily="B Yekan" Height="23" Margin="21,13,0,0" TextWrapping="Wrap" Name="TextBoxPassword" Text="" VerticalAlignment="Top" Width="186" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="21,11,0,0" TextWrapping="Wrap" Name="TextBoxInitialCatalog" Text="" VerticalAlignment="Top" Width="186" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonSavetoSetting" Content="ذخیره" HorizontalAlignment="Left" Margin="8,11,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSavetoSetting_Click" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button x:Name="WinShowProgram" Content="ورود به برنامه" HorizontalAlignment="Left" Margin="13,10,0,0" VerticalAlignment="Top" Width="81" Click="WinShowProgram_Click" Grid.Row="5" Grid.Column="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,17,0,0" Foreground="Red" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Height="16" Width="29"/>
+        <TextBlock HorizontalAlignment="Left" Margin="18,18,0,0" Foreground="Red" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,19,0,0" Foreground="Red" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,16,0,0" Foreground="Red" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="3"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,15,0,0" Foreground="Red" TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Height="16" Width="29" Grid.Row="4"/>
+        <Button x:Name="ButtonLoadSetting" Content="آخرین تنظیمات" HorizontalAlignment="Left" Margin="94,11,0,0" VerticalAlignment="Top" Width="87" Click="ButtoدloadedSettinf_onclick" Grid.Row="5" Grid.Column="1" Height="19" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>

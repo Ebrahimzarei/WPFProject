@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfManage.View.WinEditMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ویرایش کاربر" Height="570" Width="700" Loaded="Window_Loaded_1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FlowDirection="RightToLeft">
+    <Grid Name="GridFields" Margin="87,10,0,28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="126*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="182*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="156*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="15" FontWeight="Bold"  FlowDirection="LeftToRight"  HorizontalAlignment="Left" Margin="7,19,0,0" TextWrapping="Wrap" Text="نام و نام خانوادگی" VerticalAlignment="Top" Width="120" Height="31"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold"  Margin="31,11,0,0" TextWrapping="Wrap" Text="شماره ملی" VerticalAlignment="Top" Width="70" Grid.Row="1" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="28,71,0,0" TextWrapping="Wrap" Text="نام پدر" VerticalAlignment="Top" Width="44" Grid.Row="1" Height="25"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="28,13,0,0" TextWrapping="Wrap" Text="شماره پرسنلی" VerticalAlignment="Top" Width="92" Grid.Row="2" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="28,25,0,0" TextWrapping="Wrap" Text="شماره تماس" VerticalAlignment="Top" Width="92" Grid.Row="3" Height="27" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="28,19,0,0" TextWrapping="Wrap" Text="آدرس" VerticalAlignment="Top" Width="53" Grid.Row="4" Height="20"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" Margin="197,10,0,0" TextWrapping="Wrap" Name="TextBoxFullName" Text="" VerticalAlignment="Top" Width="243" PreviewTextInput="TextBoxFullName_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <TextBox  FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" Name="TextBoxNCode" VerticalAlignment="Top" Width="243" PreviewTextInput="TextBoxNCode_PreviewTextInput" Grid.Row="1" KeyDown="TextBoxNCode_KeyDown" KeyUp="TextBoxNCode_KeyUp" Grid.ColumnSpan="2" Margin="197,0,0,0"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" Margin="197,62,0,0" TextWrapping="Wrap" Text="" Name="TextBoxNameFather" VerticalAlignment="Top" Width="243" Grid.Row="1" PreviewTextInput="TextBoxNameFather_PreviewTextInput" Grid.ColumnSpan="2"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" Margin="197,5,0,0" TextWrapping="Wrap" Text="" Name="TextBoxNoPersonel" VerticalAlignment="Top" Width="243" Grid.Row="2" PreviewTextInput="TextBoxNoPersonel_PreviewTextInput" KeyDown="TextBoxNoPersonel_KeyDown" KeyUp="TextBoxNoPersonel_KeyUp" Grid.ColumnSpan="2"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" Margin="197,4,0,0" TextWrapping="Wrap" Text="" Name="TextBoxTellephone" VerticalAlignment="Top" Width="243" Grid.Row="3" PreviewTextInput="TextBoxTellephone_PreviewTextInput" KeyDown="TextBoxTellephone_KeyDown" KeyUp="TextBoxTellephone_KeyUp" Grid.ColumnSpan="2"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="70" Margin="197,10,0,0" TextWrapping="Wrap" Text="" Name="TextBoxAddress" VerticalAlignment="Top" Width="243" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Image Name="ImagePersonel" HorizontalAlignment="Left" FlowDirection="LeftToRight"  Height="143" Margin="255,21,-11,0" Grid.Row="2" VerticalAlignment="Top" Width="158" Grid.Column="1" Grid.RowSpan="4"/>
+        <Button Content=" انتخاب عکس" HorizontalAlignment="Left" Margin="259,71,0,0" VerticalAlignment="Top" Width="123" Height="40" Click="Button_Click_1" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="ButtonEdite" Content="ذخیره" HorizontalAlignment="Left" Margin="259,15,0,0" VerticalAlignment="Top" Width="123" Height="40" Click="ButtonEdite_Click" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="28,72,0,0" TextWrapping="Wrap" Text="RFIDکارت" VerticalAlignment="Top" Width="73" Grid.Row="5" Height="32"/>
+        <TextBox FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="40" Margin="197,69,0,0" TextWrapping="Wrap" Text="" Name="TextBoxRfid" VerticalAlignment="Top" Width="243" Grid.Row="5" PreviewTextInput="TextBoxRfid_PreviewTextInput" SelectionChanged="TextBoxRfid_SelectionChanged" KeyDown="TextBoxRfid_KeyDown" KeyUp="TextBoxRfid_KeyUp" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="168,22,0,0" TextWrapping="Wrap" Foreground="Red" Text="*" VerticalAlignment="Top" Width="15" Height="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="168,10,0,0" TextWrapping="Wrap" Foreground="Red" Text="*" VerticalAlignment="Top" Width="15" Height="16" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="168,21,0,0" TextWrapping="Wrap" Foreground="Red" Text="*" VerticalAlignment="Top" Width="15" Height="16" Grid.Row="2" RenderTransformOrigin="0.563,0.114"/>
+        <Button x:Name="ButtonClose" Content="پنجره اصلی" HorizontalAlignment="Left" Margin="259,10,0,0" VerticalAlignment="Top" Width="123" Height="41" Grid.Row="1" Click="ButtonClose_Click" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="12" FontWeight="Bold" Margin="194,42,0,0" TextWrapping="Wrap" Text="لطفا کارت را بر روی دستگاه کارت خوان قرار دهید" VerticalAlignment="Top" Width="246" Grid.Row="5" Height="16" Foreground="#FFE21313" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
